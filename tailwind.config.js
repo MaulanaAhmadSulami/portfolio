@@ -8,6 +8,8 @@ export default {
     extend: {},
     fontFamily: {
       'rubik-mono-one': ['"Rubik Mono One"', 'sans'],
+      'dm-mono' : ['"DM Mono"', 'sans'],
+      'momomaniac-one' : ['"Momomaniac One"', 'sans'],
     }
   },
   plugins: [],
