@@ -49,14 +49,15 @@ const Navbar = () => {
 
         {/* Tablet : MD*/}
         {MobileOpen && (
-          <ul className="md:hidden absolute top-full left-0 bg-neutral-900 text-white w-full py-2 px-4">
+          <ul className="md:hidden flex flex-col absolute top-full left-0 bg-neutral-900 text-white w-full py-2 px-4">
             {links.map(({ id, link, icon }) => (
               <li
                 key={id}
                 className="mb-2 cursor-pointer capitalize font-dm-mono text-gray-500 hover:text-navtop"
                 onClick={() => setMobileOpen(false)}
               >
-                <FontAwesomeIcon icon={icon} className="mr-2" />
+                {/* Align text and icon in mobile display */}
+                <FontAwesomeIcon icon={icon} className="mr-2 min-w-[20px]" />
                 {link}
               </li>
             ))}
