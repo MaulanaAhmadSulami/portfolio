@@ -19,9 +19,9 @@ const Home = () => {
           </p>
 
           <div>
-            <button className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-fuchsia-500 to-purple-500 cursor-pointer">
+            <button className="group text-white w-fit px-6 py-4 my-2 flex items-center rounded-md bg-gradient-to-r from-fuchsia-500 to-purple-500 cursor-pointer">
               Portfolio&nbsp;
-              <span className="group-hover:rotate-90 duration-500">
+              <span className="group-hover:rotate-90 duration-300">
                 <FontAwesomeIcon className="text-1xl ml-1" icon={faArrowRight} />
               </span>
             </button>

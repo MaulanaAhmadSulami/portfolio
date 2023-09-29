@@ -5,7 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors : { 'navtop': '#A9D2D5'},
+    },
     fontFamily: {
       'rubik-mono-one': ['"Rubik Mono One"', 'sans'],
       'dm-mono' : ['"DM Mono"', 'sans'],

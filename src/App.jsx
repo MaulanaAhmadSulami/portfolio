@@ -1,6 +1,8 @@
 import "./App.css";
 import Home from "./components/Home";
 import Navbar from "./components/NavbarTop";
+import Footer from "./components/Footer";
+import Portfolio from "./components/Portfolio";
 
 function App() {
   return (
@@ -19,11 +21,11 @@ function App() {
         </div>
 
         <div className="project-section">
-
+          <Portfolio />
         </div>
         
         <div className="contact-section">
-          
+          <Footer />
         </div>
       </div>
     </>

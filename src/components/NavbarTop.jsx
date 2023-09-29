@@ -40,18 +40,20 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <p className="text-white text-2xl font-rubik-mono-one">Kaede</p>
 
-        
-          <div className="md:hidden cursor-pointer text-gray-500" onClick={() => setMobileOpen(!MobileOpen)}>
+        <div
+          className="md:hidden cursor-pointer text-gray-500"
+          onClick={() => setMobileOpen(!MobileOpen)}
+        >
           <FontAwesomeIcon icon={MobileOpen ? faTimes : faBars} size="lg" />
         </div>
 
-        {/* Mobile*/}
+        {/* Tablet : MD*/}
         {MobileOpen && (
           <ul className="md:hidden absolute top-full left-0 bg-neutral-900 text-white w-full py-2 px-4">
             {links.map(({ id, link, icon }) => (
               <li
                 key={id}
-                className="mb-2 cursor-pointer capitalize font-dm-mono text-gray-500 hover:text-white duration-200"
+                className="mb-2 cursor-pointer capitalize font-dm-mono text-gray-500 hover:text-navtop"
                 onClick={() => setMobileOpen(false)}
               >
                 <FontAwesomeIcon icon={icon} className="mr-2" />
@@ -65,9 +67,9 @@ const Navbar = () => {
           {links.map(({ id, link, icon }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize font-dm-mono text-gray-500 hover:scale-105 duration-200"
+              className="px-4 cursor-pointer capitalize font-dm-mono text-gray-500 hover:scale-105 duration-200 hover:text-navtop"
             >
-              <FontAwesomeIcon icon={icon} className="mr-2"/>
+              <FontAwesomeIcon icon={icon} className="mr-2" />
               {link}
             </li>
           ))}
