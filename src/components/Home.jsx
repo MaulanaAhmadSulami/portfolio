@@ -12,7 +12,7 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto mt-10 flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full md:max-w-md">
           <h2 className="font-rubik-mono-one text-2xl sm:text-3xl font-bold text-white">
-            Hi i'm Kaede
+            Hi i&apos;m Kaede
           </h2>
           <p className="font-momomaniac-one text-1xl sm:text-xl text-gray-300 py-4 max-w-md">
             Welcome to my personal website!

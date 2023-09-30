@@ -3,30 +3,21 @@ import Home from "./components/Home";
 import Navbar from "./components/NavbarTop";
 import Footer from "./components/Footer";
 import Portfolio from "./components/Portfolio";
+import About from "./components/About";
 
 function App() {
   return (
     <>
       <div className="App">
-        <div className="navbar-section">
-          <Navbar />
-        </div>
+        <Navbar />
 
-        <div className="home-section">
-            <Home />
-        </div>
+        <Home />
 
-        <div className="about-section">
+        {/* <About /> */}
 
-        </div>
+        {/* <Portfolio /> */}
 
-        <div className="project-section">
-          <Portfolio />
-        </div>
-        
-        <div className="contact-section">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </>
   );
