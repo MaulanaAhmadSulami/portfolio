@@ -1,6 +1,7 @@
 import React from "react";
 import mockProfile from "../assets/MockProfile.png";
-import { faArrowRight, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import profile_second from "../assets/ibis_pfp.png"
+import { faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
@@ -33,7 +34,7 @@ const Home = () => {
 
         <div className="w-full md:w-1/2 my-3 mx-20">
           <img
-            src={mockProfile}
+            src={profile_second}
             alt="Mock Profile"
             className="rounded-2xl mx-auto w-3/4 md:w-full h-auto"
           />

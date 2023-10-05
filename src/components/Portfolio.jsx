@@ -3,7 +3,7 @@ const Portfolio = () => {
     return <div>
         <div>
             <div>
-                <p>
+                <p className="text-2xl">
                     Portfolio
                 </p>
             </div>

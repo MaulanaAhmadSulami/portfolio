@@ -8,15 +8,13 @@ import About from "./components/About";
 function App() {
   return (
     <>
-      <div className="App">
+      <div className="App ">
         <Navbar />
-
         <Home />
-
-        {/* <About /> */}
-
+        <About />
         <Portfolio />
 
+        {/* Footer is contact */}
         <Footer />
       </div>
     </>
