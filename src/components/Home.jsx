@@ -1,6 +1,5 @@
 import React from "react";
-import mockProfile from "../assets/MockProfile.png";
-import profile_second from "../assets/ibis_pfp.png"
+import profile_second from "../assets/ibis_forwe.png"
 import { faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
