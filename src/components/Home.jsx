@@ -2,6 +2,7 @@ import React from "react";
 import profile_second from "../assets/ibis_forwe.png"
 import { faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ReactTypingEffect from "react-typing-effect";
 
 const Home = () => {
   return (
@@ -12,7 +13,27 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto mt-10 flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full md:max-w-md">
           <h2 className="font-rubik-mono-one text-2xl sm:text-3xl text-white">
-            Hi i&apos;m Kaede
+            <ReactTypingEffect
+              text={["Hello.", "I'm Kaede!"]}
+              cursorRenderer={(cursor) => <h1>{cursor}</h1>}
+              displayTextRenderer={(text, i) => {
+                return (
+                  <h1>
+                    {text.split("").map((char, i) => {
+                      const key = `${i}`;
+                      return (
+                        <span
+                          key={key}
+                          style={i % 2 === 0 ? { color: "" } : {}}
+                        >
+                          {char}
+                        </span>
+                      );
+                    })}
+                  </h1>
+                );
+              }}
+            />
           </h2>
           <p className="font-momomaniac-one text-1xl sm:text-xl text-gray-300 py-4 max-w-md">
             Welcome to my personal website!

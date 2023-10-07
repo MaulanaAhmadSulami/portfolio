@@ -30,7 +30,7 @@ const Portfolio = () => {
                   {/* line-clamp-5 (to make ... text effect) */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-5 group-hover:bg-opacity-10 group-hover:bg-gray-500 transition ease-in-out group-hover:opacity-100 duration-300">
                     <a href={links} target="blank" className="text-white font-bold">
-                      <p className="">{name}</p>
+                      <p className="font-momomaniac-one">{name}</p>
                     </a>
                   </div>
                 </div>
