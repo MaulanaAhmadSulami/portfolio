@@ -9,31 +9,31 @@ const WorkLists = [
     {
         id: 1,
         src: dummyPorto,
-        name: "Github",
-        links: "https://github.com/MaulanaAhmadSulami"
+        name: "RAAMEN",
+        links: "https://github.com/MaulanaAhmadSulami/Raamen"
       },
       {
         id: 2,
         src: dummyPortoTwo,
-        name: "",
+        name: "StyleZest",
         links: ""
       },
       {
         id: 3,
         src: dummyPortoThree,
-        name: "",
-        links: ""
+        name: "Bocchi The Rock! Website",
+        links: "https://github.com/MaulanaAhmadSulami/Bocchi"
       },
       {
         id: 4,
         src: dummyPortoFour,
-        name: "",
-        links: ""
+        name: "The Lazy TicTacToe Game",
+        links: "https://github.com/MaulanaAhmadSulami/TicTacToe"
       },
       {
         id: 5,
         src: dummyPortoFive,
-        name: "",
+        name: "My own personal website!",
         links: ""
       },
 ];

@@ -11,7 +11,7 @@ const Portfolio = () => {
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full ">
         <div className="pb-8">
           <p className="font-rubik-mono-one text-2xl sm:text-3xl text-center underline border-p-2 ">
-            My Works
+            Portfolio
           </p>
           {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officia odio temporibus aperiam voluptatibus, doloribus est excepturi labore doloremque necessitatibus?</p> */}
         </div>
@@ -25,11 +25,12 @@ const Portfolio = () => {
                   <img
                     src={src}
                     alt=""
-                    className="block w-full rounded-md object-cover duration-200 group-hover:scale-105 group-hover:opacity-20"
+                    className="block w-full rounded-md object-cover duration-200 group-hover:scale-110 group-hover:opacity-20"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-5 group-hover:bg-opacity-10 group-hover:bg-gray-500 transition ease-in-out group-hover:opacity-100 group-hover:scale-110 duration-300">
-                    <a href={links} target="blank">
-                      <p className="text-white font-bold">{name}</p>
+                  {/* line-clamp-5 (to make ... text effect) */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-5 group-hover:bg-opacity-10 group-hover:bg-gray-500 transition ease-in-out group-hover:opacity-100 duration-300">
+                    <a href={links} target="blank" className="text-white font-bold">
+                      <p className="">{name}</p>
                     </a>
                   </div>
                 </div>
