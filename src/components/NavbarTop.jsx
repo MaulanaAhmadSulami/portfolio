@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useRef } from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,9 +10,11 @@ import {
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import ReactTypingEffect from "react-typing-effect";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const [MobileOpen, setMobileOpen] = useState(false);
+  const mobileMenuRef = useRef(null);
   const links = [
     {
       id: 1,
@@ -35,6 +37,28 @@ const Navbar = () => {
       icon: faAddressBook,
     },
   ];
+
+  useEffect(() => {
+    const handleDocumentClick = (e) => {
+      if (MobileOpen && mobileMenuRef.current && !mobileMenuRef.current.contains(e.target)) {
+        setMobileOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      if (MobileOpen) {
+        setMobileOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleDocumentClick);
+    document.addEventListener("scroll", handleScroll);
+
+    // return () => {
+    //   document.removeEventListener("click", handleDocumentClick);
+    //   // document.removeEventListener("scroll", handleScroll);
+    // };
+  }, [MobileOpen]);
 
   return (
     <nav className="bg-neutral-900 p-4 fixed top-0 left-0 w-full z-10">
@@ -89,6 +113,9 @@ const Navbar = () => {
             ))}
           </ul>
         )}
+        <div>
+          
+        </div>
 
         <ul className="hidden md:flex">
           {links.map(({ id, link, icon }) => (
