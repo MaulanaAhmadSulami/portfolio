@@ -12,7 +12,7 @@ const Home = () => {
     >
       <div className="max-w-screen-lg mx-auto mt-10 flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full md:max-w-md">
-          <h2 className="font-rubik-mono-one text-2xl sm:text-3xl text-white">
+          <h2 className="font-rubik-mono-one text-2xl sm:text-2xl text-white">
             <ReactTypingEffect
               text={["Hello.", "I'm Kaede!"]}
               cursorRenderer={(cursor) => <h1>{cursor}</h1>}

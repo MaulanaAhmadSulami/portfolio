@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,9 +7,9 @@ import {
   faBriefcaseClock,
   faAddressBook,
   faBars,
-  faTimes
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-
+import ReactTypingEffect from "react-typing-effect";
 
 const Navbar = () => {
   const [MobileOpen, setMobileOpen] = useState(false);
@@ -27,22 +27,44 @@ const Navbar = () => {
     {
       id: 3,
       link: "portfolio",
-      icon: faBriefcaseClock
+      icon: faBriefcaseClock,
     },
     {
       id: 4,
       link: "contact",
-      icon: faAddressBook
+      icon: faAddressBook,
     },
   ];
 
-  
-
   return (
-    
     <nav className="bg-neutral-900 p-4 fixed top-0 left-0 w-full z-10">
       <div className="container mx-auto flex justify-between items-center">
-        <p className="text-white text-2xl font-rubik-mono-one">Kaede</p>
+        <div className="flex items-center">
+          <p className="text-white text-2xl font-rubik-mono-one">Kaede</p>
+          <div className="text-white text-2xl sm:text-xl ml-3">
+            <ReactTypingEffect
+              text={["こんにちは!", "안녕하세요!"]}
+              cursorRenderer={(cursor) => <h1>{cursor}</h1>}
+              displayTextRenderer={(text, i) => {
+                return (
+                  <h1>
+                    {text.split("").map((char, i) => {
+                      const key = `${i}`;
+                      return (
+                        <span
+                          key={key}
+                          style={i % 2 === 0 ? { color: "" } : {}}
+                        >
+                          {char}
+                        </span>
+                      );
+                    })}
+                  </h1>
+                );
+              }}
+            />
+          </div>
+        </div>
 
         <div
           className="md:hidden cursor-pointer text-gray-500"
