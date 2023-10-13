@@ -5,7 +5,7 @@ const Portfolio = () => {
 
   return (
     <div
-      name="Portfolio"
+      name="portfolio"
       className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full ">
@@ -15,6 +15,8 @@ const Portfolio = () => {
           </p>
           {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officia odio temporibus aperiam voluptatibus, doloribus est excepturi labore doloremque necessitatibus?</p> */}
         </div>
+
+        <div id="portfolio-section">
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {
@@ -37,6 +39,7 @@ const Portfolio = () => {
               </div>
             ))
           }
+        </div>
         </div>
       </div>
     </div>

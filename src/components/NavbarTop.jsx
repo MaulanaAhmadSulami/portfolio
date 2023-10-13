@@ -12,6 +12,8 @@ import {
 import ReactTypingEffect from "react-typing-effect";
 import { useEffect } from "react";
 
+import { Link } from "react-scroll";
+
 const Navbar = () => {
   const [MobileOpen, setMobileOpen] = useState(false);
   const mobileMenuRef = useRef(null);
@@ -40,7 +42,11 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleDocumentClick = (e) => {
-      if (MobileOpen && mobileMenuRef.current && !mobileMenuRef.current.contains(e.target)) {
+      if (
+        MobileOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(e.target)
+      ) {
         setMobileOpen(false);
       }
     };
@@ -54,10 +60,10 @@ const Navbar = () => {
     document.addEventListener("click", handleDocumentClick);
     document.addEventListener("scroll", handleScroll);
 
-    // return () => {
-    //   document.removeEventListener("click", handleDocumentClick);
-    //   // document.removeEventListener("scroll", handleScroll);
-    // };
+    //   // return () => {
+    //   //   document.removeEventListener("click", handleDocumentClick);
+    //   //   // document.removeEventListener("scroll", handleScroll);
+    //   // };
   }, [MobileOpen]);
 
   return (
@@ -107,15 +113,16 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
               >
                 {/* Align text and icon in mobile display */}
-                <FontAwesomeIcon icon={icon} className="mr-2 min-w-[20px]" />
-                {link}
+                <Link to={link} smooth duration={500}>
+                  <FontAwesomeIcon icon={icon} className="mr-2" />
+                </Link>
+                <Link to={link} smooth duration={500}>
+                  {link}
+                </Link>
               </li>
             ))}
           </ul>
         )}
-        <div>
-          
-        </div>
 
         <ul className="hidden md:flex">
           {links.map(({ id, link, icon }) => (
@@ -123,8 +130,13 @@ const Navbar = () => {
               key={id}
               className="px-4 cursor-pointer capitalize font-dm-mono text-gray-500 hover:scale-105 duration-200 hover:text-navtop"
             >
-              <FontAwesomeIcon icon={icon} className="mr-2" />
-              {link}
+              <Link to={link} smooth duration={500}>
+                <FontAwesomeIcon icon={icon} className="mr-2" />
+              </Link>
+
+              <Link to={link} smooth duration={500}>
+                {link}
+              </Link>
             </li>
           ))}
         </ul>

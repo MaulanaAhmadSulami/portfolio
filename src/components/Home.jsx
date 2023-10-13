@@ -3,6 +3,7 @@ import profile_second from "../assets/ibis_forwe.png"
 import { faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactTypingEffect from "react-typing-effect";
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
@@ -40,6 +41,7 @@ const Home = () => {
           </p>
 
           <div>
+            <Link to="portfolio" smooth duration={500}>
             <button className="group text-white w-fit px-6 py-4 my-2 flex items-center rounded-md bg-gradient-to-r from-fuchsia-500 to-purple-500 cursor-pointer">
               Portfolio&nbsp;
               <span className="group-hover:rotate-90 duration-300">
@@ -49,6 +51,7 @@ const Home = () => {
                 />
               </span>
             </button>
+            </Link>
           </div>
         </div>
 
